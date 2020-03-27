@@ -208,6 +208,13 @@ Markup:
           </a>
         </li>
         <li>
+          <a href="#toDevOps">
+            <span class="nav-links__label">DevOps</span>
+            <img src="https://malini4ev.site/images/devops.svg" class="nav-links__icon"/>
+            
+          </a>
+        </li>
+        <li>
           <a href="#toContact">
             <img src="https://malini4ev.site/images/calendar.svg" class="nav-links__icon"/>
             <span class="nav-links__label">Контакты</span>
@@ -320,7 +327,7 @@ Styleguide menu
 Markup:
 <main class="oneColum header">
       <div class="oneColum__myPhoto">
-        <img src="https://malini4ev.site/images/profilepic2.jpg" alt="Cool frelancer"/>
+        <img src="https://malini4ev.site/images/My_face.jpg" alt="Cool frelancer"/>
         <div class="contenerMy">
           <div class="conteinerMy__box"></div>
           <div class="conteinerMy__box"></div>
@@ -329,7 +336,7 @@ Markup:
       </div>
       <div class="oneColum__body" id="toHome" name="toHome">
         <h1>Malinichev Sergey Urevich</h1>
-        <h3>Full Stack developer (Frontend/ Backend)</h3>
+        <h3>Frontend developer</h3>
         <div class="inline">
           <a  class="btn-prim" id="myShake" href="#toContact">Связатся!</a>
          </div>

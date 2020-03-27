@@ -1,5 +1,13 @@
  html {
         box-sizing: border-box;
+        /*font-size: 16px;*/
+        line-height: 1.4em;
+        letter-spacing: 0.02em;  
+      }
+  @media (min-width: 30em) {
+     html {
+        font-size: 1.5em;    
+    }
         
       }
 :root {
@@ -73,21 +81,21 @@ body {
 
         cursor: pointer;
         font-size: 1.1rem;
-        text-decoration: none;
+        /*text-decoration: none;*/
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        color: var(--colour-brend-red); 
+        /*color: var(--colour-brend-red); */
 
     }
     a:visited {
-      color: var(--colour-brend-dark); 
+      /*color: var(--colour-brend-dark); */
     }
     a:hover {
-      color: var(--colour-brend-dark);
+      /*color: var(--colour-brend-dark);*/
     }
     a:active {
 
-      color: var(--colour-brend-red);
+      /*color: var(--colour-brend-red);*/
     }
 
 h1, h2, h3 {
@@ -111,7 +119,7 @@ svg {
 }
 @media (min-width: 30em) {
    .wraper {
-    padding: 0 2rem 2em;
+    padding: 0 2vw 2vw;
     max-width: 1500px;
   } 
 }
@@ -138,25 +146,30 @@ Styleguide header
           padding: 1rem;
         }
   .page-header > img {
-          margin: .1em;
-          width: 4em;
+    margin: .1em;
+    width: 3em;
         }
   .page-header > h1 {
           color: var(--body-color);
+          margin: 0;
+          font-weight: 100;
+          font-size: 1.3em;
         }
 
 @media (min-width: 30em) {
   .page-header {
-          padding: 2rem;
+          padding: 1rem 2rem;
           display: flex;
           align-items: flex-end;
         }
   .page-header > img {
           margin: .1em;
-          width: 8em;
+          width: 3em;
         }
   .page-header > h1 {
           color: var(--body-color);
+          font-weight: 100;
+          font-size: 1.3em;
         }
 }
 
@@ -208,13 +221,13 @@ Styleguide menu
  @media (min-width: 30em) {
         .main-nav {
           position: fixed;
-          left: 0;
-          top: 7.25rem;
+          right: 0;
+          top: 8.25rem;
           z-index: 10;
           background-color: transparent;
           transition: background-color .5s linear;
-          border-top-right-radius: 0.5em;
-          border-bottom-right-radius: 0.5em;
+          border-top-left-radius: 0.5em;
+          border-bottom-left-radius: 0.5em;
         }
 
         .main-nav:hover {
@@ -234,7 +247,8 @@ Styleguide menu
         margin-left: 0.8em;
       }
       .nav-links > li > a {
-        display: block;
+        display: flex;
+        justify-content: space-between;
         padding: 0.8em 0;
         color: white;
         font-size: 0.8rem;
@@ -306,7 +320,7 @@ Styleguide menu
 Markup:
 <main class="oneColum header">
       <div class="oneColum__myPhoto">
-        <img src="https://malini4ev.site/images/profilepic2.jpg" alt="Cool frelancer"/>
+        <img src="https://malini4ev.site/images/My_face.jpg" alt="Cool frelancer"/>
         <div class="contenerMy">
           <div class="conteinerMy__box"></div>
           <div class="conteinerMy__box"></div>
@@ -315,7 +329,7 @@ Markup:
       </div>
       <div class="oneColum__body" id="toHome" name="toHome">
         <h1>Malinichev Sergey Urevich</h1>
-        <h3>Full Stack developer (Frontend/ Backend)</h3>
+        <h3>Frontend developer</h3>
         <div class="inline">
           <a  class="btn-prim" id="myShake" href="#toContact">Связатся!</a>
          </div>
@@ -410,12 +424,27 @@ Styleguide fist__el
         background-color: #fdc700;  
       }   
     .oneColum {
-        animation: fly-in 500ms ease-in;
-        animation-fill-mode: backwards;
+        /* animation: fly-in 500ms ease-in; */
+        /* animation-fill-mode: backwards; */
       }
     .oneColum__body > p {
 
           margin-block-end: 0;
+    }
+    .oneColum__body > .inline > .btn {
+      border-radius: 0;
+      margin: auto 0;
+      padding: 0.6em 1em;
+      border: 0;
+      /* background-color: hsl(220, 50%, 50%); */
+      /* color: white; */
+      font: inherit;
+      /* transition: background-color 0.3s linear; */
+      cursor: pointer;
+      font-size: inherit;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
     .zagalov__body{
 
@@ -427,23 +456,38 @@ Styleguide fist__el
         color: black;
         z-index: 6;
       }
+    .oneColum__body > .inline  {
+      font-size: 1.1rem;
+      height: auto;
+    } 
+    .oneColum__body > .linkToMail{
+      display: block;
+      margin-block-start: 1em;
+      text-decoration: none;
+      color: #fff;
+      text-transform: none;
+    }
+    
   @media (min-width: 30em) {
+    .wraper{
+
+    }
     .oneColum.header {
         display: flex;
-        
+        justify-content: center;
         padding: 1rem;
         perspective: 500px;
    
         color: #ddd;
         
         border-radius: var(--card-exept-first-border-radius);
-        align-items: center;
+        /* align-items: center; */
       }
      
       .oneColum.header > .oneColum__myPhoto {
             display: flex;
             align-items: center;
-            margin-left: 3em;
+            /* margin-left: 3em; */
       }
 
 
@@ -489,14 +533,29 @@ Styleguide fist__el
         flex-wrap: wrap;
         margin: 0 5rem;
       }
+      
       .oneColum__body{
-   
+        
         padding: 1em;
         flex: 2;
         color: #ddd;
         text-shadow: 2px 2px 1px rgba(0,0,0,0.65);
         z-index: 6;
       }
+      .oneColum__body > h2 {
+        /* font-family: var(--h1h2h3h4-font-family); */
+        font-weight: 900;
+        font-size: 1.1em;
+      }
+      .oneColum__body > h3 {
+        /* font-family: var(--h1h2h3h4-font-family); */
+        font-weight: 900;
+        font-size: 1.1em;
+      }
+      .oneColum__body > .inline  {
+        font-size: 17px;
+        height: auto;
+      } 
       .zagalov__body{
         text-decoration-color: black;
         color: #444;
@@ -543,21 +602,21 @@ Styleguide allOtherBlock
       }
       .flyin-grid__item {
             
-        animation: fly-in 600ms ease-in;
-        animation-fill-mode: backwards;
+        /* animation: fly-in 600ms ease-in; */
+        /* animation-fill-mode: backwards; */
       }
       .oneColum {
-        animation: fly-in 500ms ease-in;
-        animation-fill-mode: backwards;
+        /* animation: fly-in 500ms ease-in; */
+        /* animation-fill-mode: backwards; */
       }
       .flyin-grid__item:nth-child(2) {
-        animation-delay: 0.15s;
+        /* animation-delay: 0.15s; */
       }
       .flyin-grid__item:nth-child(3) {
-        animation-delay: 0.3s;
+        /* animation-delay: 0.3s; */
       }
       .flyin-grid__item:nth-child(4) {
-        animation-delay: 0.45s;
+        /* animation-delay: 0.45s; */
       }
 @media (min-width: 30em) {
         .flyin-grid {
@@ -570,8 +629,8 @@ Styleguide allOtherBlock
         align-items: end;
         width: 18em;
         margin: 1em 1em ;
-        animation: fly-in 600ms ease-in;
-        animation-fill-mode: backwards;
+        /* animation: fly-in 600ms ease-in; */
+        /* animation-fill-mode: backwards; */
       }
   }
 
@@ -615,6 +674,17 @@ Styleguide allOtherBlock
   .card > img {
         width: 100%;
       }
+  .allCenter {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .allCenter > #adr {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: initial;
+  }
 
 /*
 Копки которые внизу
@@ -654,8 +724,21 @@ Markup:
 </main>
 
 Styleguide btnInBottom
-*/   
+*/ 
+.message{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.message > .btn {
+  width: calc(100% / 7);
+  display: flex;
+  justify-content: center;
+  
+}
 .btn {
+  /* width: calc(100% / 6); */
   display: inline-block;
   margin: 0.1rem 0;
   font-weight: 400;
@@ -673,6 +756,7 @@ Styleguide btnInBottom
   line-height: 1.5;
   
   border-radius: var(--btn-in-bottom-border-radius);
+  /* border-radius: 0; */
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -693,7 +777,7 @@ Styleguide btnInBottom
   float: left;
 }
 .oneColum__body > .inline > .btn-prim {
-      padding: 0.6em 1em;
+      padding: 0.8em 1em;
       border: 0;
       background-color: hsl(220, 50%, 50%);
       color: white;
