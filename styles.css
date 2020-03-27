@@ -57,7 +57,7 @@ Styleguide vars
   --color-card-background-exsept-firstEl: #fff;
   --card-exept-first-border-radius: .3rem;
 
-   --colour-btn-in-bottom: #48a79c;
+   --colour-btn-in-bottom: rgb(35, 100, 21);
    --colour-btn-in-bottom-onHover: #2d6d63;
 
    --btn-in-bottom-border-radius: .3rem;
@@ -141,7 +141,7 @@ Styleguide header
 */
   .page-header {
           display: flex;
-          align-items: flex-start;
+          align-items: flex-end;
           margin: 0;
           padding: 1rem;
         }
@@ -249,12 +249,16 @@ Styleguide menu
         padding: 0 1rem;
         list-style: none;
         justify-content: space-between;
+        flex-wrap: wrap;
       }
       .nav-links > li + li {
-        margin-left: 0.8em;
+        /* margin-left: 0.8em; */
       }
       .nav-links > li > a {
         display: flex;
+        
+        
+        align-items: center;
         justify-content: space-between;
         padding: 0.8em 0;
         color: white;
@@ -266,6 +270,7 @@ Styleguide menu
       .nav-links__icon {
         height: 1.5em;
         width: 1.5em;
+        margin-left: 4px;
         vertical-align: -0.2em;
       }
       .nav-links > li > a:hover {
@@ -311,6 +316,7 @@ Styleguide menu
 
         .nav-links__icon {
           transition: transform 0.2s ease-out;
+          fill:#fdc700;
         }
 
         .nav-links a:hover > .nav-links__icon,
@@ -406,6 +412,7 @@ Styleguide fist__el
         box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
         
         height: 14em;
+        width: auto;
         z-index: 6;
       }
 
@@ -440,6 +447,7 @@ Styleguide fist__el
     }
     .oneColum__body > .inline > .btn {
       border-radius: 0;
+      min-width: 48px;
       margin: auto 0;
       padding: 0.6em 1em;
       border: 0;
@@ -460,10 +468,11 @@ Styleguide fist__el
     
         padding: 1em 0 0 0;
         flex:2;
-        color: black;
+        color: rgb(252, 252, 252);
         z-index: 6;
       }
     .oneColum__body > .inline  {
+      display: flex;
       font-size: 1.1rem;
       height: auto;
     } 
@@ -508,7 +517,7 @@ Styleguide fist__el
         border: 5px solid #ddd;
         -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.35);
         box-shadow: 0 5px 5px 0 rgba(0,0,0,0.35);
-     
+        width: auto;
         height: 14em;
         z-index: 6;
       }
@@ -560,6 +569,7 @@ Styleguide fist__el
         font-size: 1.1em;
       }
       .oneColum__body > .inline  {
+        display: flex;
         font-size: 17px;
         height: auto;
       } 
@@ -741,11 +751,13 @@ Styleguide btnInBottom
 .message > .btn {
   width: calc(100% / 7);
   display: flex;
+  min-width: 48px;
   justify-content: center;
   
 }
 .btn {
   /* width: calc(100% / 6); */
+  min-width: 48px;
   display: inline-block;
   margin: 0.1rem 0;
   font-weight: 400;

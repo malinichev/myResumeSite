@@ -10,28 +10,14 @@
     <meta charset="utf-8">
     <meta name="yandex-verification" content="6883ada12a0c69fe" />
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=5.0, user-scalable=0">
     <meta name="description" content="Malinichev Sergey resume" />
 
     <meta name="keywords"
       content="Malinichev, Sergey, resume, Frontend, backend, fullstack, freelancer" />
     <meta name="robots" content="index, follow" />
-          <!-- Yandex.Metrika counter -->
-              <script type="text/javascript" >
-                 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                 m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-                 (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-                 ym(53792599, "init", {
-                      clickmap:true,
-                      trackLinks:true,
-                      accurateTrackBounce:true,
-                      webvisor:true
-                 });
-              </script>
-              <noscript><div><img src="https://mc.yandex.ru/watch/53792599" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-              <!-- /Yandex.Metrika counter -->
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+        
+              <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Merriweather|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
@@ -40,7 +26,7 @@
   <body>
     <header>
       <div class="page-header" itemscope itemtype="http://schema.org/Brand">
-        <img src="images/logo.svg" alt="logo Malinichev Sergey" itemprop="logo">
+        <img loading="lazy" src="images/logo.svg" alt="logo Malinichev Sergey" itemprop="logo">
         <h1>alini4ev.site</h1>
       </div>
       
@@ -51,28 +37,28 @@
         <li>
           <a href="#toHome" id="scroll">
             <span class="nav-links__label">Home</span>
-            <img src="images/home.svg" class="nav-links__icon"/>
+            <img loading="lazy" alt='nav-links__icon' src="images/home.svg" class="nav-links__icon"/>
             
           </a>
         </li>
         <li>
           <a href="#toFrontend">
             <span class="nav-links__label">Frontend</span>
-            <img src="images/star.svg" class="nav-links__icon"/>
+            <img loading="lazy" alt='nav-links__icon' src="images/star.svg" class="nav-links__icon"/>
             
           </a>
         </li>
         <li>
           <a href="#toBackend">
             <span class="nav-links__label">Backend</span>
-            <img src="images/members.svg" class="nav-links__icon"/>
+            <img loading="lazy"  alt='nav-links__icon' src="images/members.svg" class="nav-links__icon"/>
             
           </a>
         </li>
         <li>
           <a href="#toDevOps">
             <span class="nav-links__label">DevOps</span>
-            <img src="images/devops.svg" class="nav-links__icon"/>
+            <img loading="lazy" alt='nav-links__icon' src="images/devops.svg" class="nav-links__icon"/>
             
           </a>
         </li>
@@ -81,7 +67,7 @@
         <li>
           <a href="#toContact">
             <span class="nav-links__label">Contact</span>
-            <img src="images/calendar.svg" class="nav-links__icon"/>
+            <img loading="lazy" alt='nav-links__icon' src="images/calendar.svg" class="nav-links__icon"/>
             
           </a>
         </li>
@@ -90,7 +76,19 @@
     <div class="wraper">
     <main class="oneColum header" itemscope itemtype="http://schema.org/Person">
       <div class="oneColum__myPhoto" >
-        <img src="images/My_face.jpg" alt="Sergey Malinichev" itemprop="image"/>
+
+        <!-- <img src="images/my-face-small.jpg"
+     srcset="images/my-face-large.jpg 1024w, images/my-face-medium.jpg 640w, images/My_face_small.jpg 320w"
+     sizes="(min-width: 36em) 33.3vw, 100vw"
+     alt="Sergey Malinichev" loading="lazy" itemprop="image"> -->
+        <img loading="lazy" alt='myPhoto' src="https://malini4ev.site/images/my-face-small.jpg" 
+        srcset="https://malini4ev.site/images/my-face-small.jpg 320w,
+        https://malini4ev.site/images/my-face-medium.jpg 680w,
+        https://malini4ev.site/images/my-face-large.jpg 1440w"
+        sizes="(max-width: 320px) 280px,
+              (max-width: 680px) 640px,
+              1440px"
+        alt="Sergey Malinichev" itemprop="image"/>
         <div class="contenerMy">
           <div class="conteinerMy__box"></div>
           <div class="conteinerMy__box"></div>
@@ -103,12 +101,12 @@
         <h3 itemprop="disambiguatingDescription">Full Stack developer (Frontend/ Backend)</h3>
         <div class="inline">
           <a  class="btn-prim" id="myShake"  href="#toContact">Связатся!</a>
-          <a class="btn" href="data/malinichev-frontend-resume.pdf">Pезюме в pdf</a>
+          <a class="btn"  href="data/malinichev-frontend-resume.pdf">Pезюме в pdf</a>
           
           <!-- <p>e-mail: malinichev_s@mail.ru</p> -->
           
         </div>
-        <a class="linkToMail" href="https://github.com/malinichev" target="_blank" data-messenger="git">
+        <a class="linkToMail"  rel="noreferrer" href="https://github.com/malinichev" target="_blank" data-messenger="git">
           git: https://github.com/malinichev
         </a>
        
@@ -227,7 +225,7 @@
   </main>
   <main class="flyin-grid">
     <div class="flyin-grid__item card" >
-      <div id="bem" class=""></div>
+      
       
       <p>Использую:</p>
       <p>-	Ubuntu-server</p>
@@ -263,32 +261,32 @@
          <div id="adr" itemscope itemtype="http://schema.org/Person"> 
                  
            
-                 <a class="btn" href="tel:+79842791121" itemprop="telephone">Тел.: +79842791121</a>
-                 <a class="btn" href="email:malinichev_s@mail.ru" itemprop="email">malinichev_s@mail.ru</a>
-                 <a class="btn" href="data/malinichev-frontend-resume.docx">Pезюме в docx</a>
-                 <a class="btn" href="data/malinichev-frontend-resume.pdf">Pезюме в pdf</a> 
+                 <a class="btn" rel="noreferrer" href="tel:+79842791121" itemprop="telephone">Тел.: +79842791121</a>
+                 <a class="btn" rel="noreferrer" href="email:malinichev_s@mail.ru" itemprop="email">malinichev_s@mail.ru</a>
+                 <a class="btn" rel="noreferrer" href="data/malinichev-frontend-resume.docx">Pезюме в docx</a>
+                 <a class="btn" rel="noreferrer" href="data/malinichev-frontend-resume.pdf">Pезюме в pdf</a> 
          </div>
        
            <div class="message">
-             <a class="btn" href="https://api.whatsapp.com/send?phone=+79842791121&text=&source=&data=#"
+             <a class="btn" rel="noreferrer" href="https://api.whatsapp.com/send?phone=+79842791121&text=&source=&data=#"
                 target="_blank" data-messenger="whatsapp">
-               <img src="images/icons/messengers/whatsapp.svg" alt="whatsapp icon">
+               <img loading="lazy" src="images/icons/messengers/whatsapp.svg" alt="whatsapp icon">
              </a>
-             <a class="btn" href="viber://chat?number=+79842791121" target="_blank" data-messenger="viber"
+             <a class="btn" rel="noreferrer" href="viber://chat?number=+79842791121" target="_blank" data-messenger="viber"
                >
-               <img src="images/icons/messengers/viber.svg" alt="viber icon">
+               <img loading="lazy" src="images/icons/messengers/viber.svg" alt="viber icon">
              </a>
-             <a class="btn" href="tg://resolve?domain=Malini4" target="_blank" data-messenger="instagram">
-               <img src="images/icons/messengers/telegram.svg" alt="instagram icon">
+             <a class="btn" rel="noreferrer" href="tg://resolve?domain=Malini4" target="_blank" data-messenger="instagram">
+               <img loading="lazy" src="images/icons/messengers/telegram.svg" alt="instagram icon">
              </a>
-             <a class="btn" href="https://www.linkedin.com/in/malini4/" target="_blank" data-messenger="git">
-               <img src="images/icons/messengers/li3-01.svg" alt="git icon">
+             <a class="btn" rel="noreferrer" href="https://www.linkedin.com/in/malini4/" target="_blank" data-messenger="git">
+               <img loading="lazy" src="images/icons/messengers/li3-01.svg" alt="git icon">
              </a>
-             <a class="btn" href="https://github.com/malinichev" target="_blank" data-messenger="git">
-               <img src="images/git.svg" alt="git icon">
+             <a class="btn" rel="noreferrer" href="https://github.com/malinichev" target="_blank" data-messenger="git">
+               <img loading="lazy" src="images/git.svg" alt="git icon">
              </a>
-             <a class="btn" href="mailto:malinichev_s@mail.ru" target="_blank" data-messenger="git">
-               <img src="images/icons/messengers/mail.svg" alt="git icon">
+             <a class="btn" rel="noreferrer" href="mailto:malinichev_s@mail.ru" target="_blank" data-messenger="git">
+               <img loading="lazy" src="images/icons/messengers/mail.svg" alt="git icon">
              </a>
             <!--  <a href="https://webmaster.yandex.ru/sqi?host=malini4ev.site"><img width="88" height="31" alt="" border="0" src="https://yandex.ru/cycounter?malini4ev.site&theme=light&lang=ru"/></a>
 -->
@@ -298,9 +296,25 @@
   </main>
   </div>
  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.2/lottie_svg.min.js" type="text/javascript"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script defer src="js/lottie_svg.min.js" type="text/javascript"></script>
+  <script defer src="https://code.jquery.com/jquery-3.4.1.js"></script>
   
-  <script src="js/script.js" type="text/javascript"></script>
+  <script async src="js/script.min.js" type="text/javascript"></script>
+  <!-- Yandex.Metrika counter -->
+<script defer type="text/javascript" >
+setTimeout(function(){
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(53792599, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true
+  });
+}, 3000); //set this as high as you can without ruining your stats.
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53792599" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
   </body>
 </html>
