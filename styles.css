@@ -1,0 +1,834 @@
+ html {
+        box-sizing: border-box;
+        /*font-size: 16px;*/
+        line-height: 1.4em;
+        letter-spacing: 0.02em;  
+      }
+  @media (min-width: 30em) {
+     html {
+        font-size: 1.5em;    
+    }
+        
+      }
+:root {
+  box-sizing: border-box;  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+
+/*
+Задаем переменные 
+
+меняем переменные по своему усмотрению в начале CSS root
+
+
+Markup:
+<body>
+  <div>
+    <h1>Hellow!!</h1>
+  </div>
+</body>
+
+Styleguide vars
+*/
+:root {
+  --body-background-color: hsl(200, 80%, 30%);
+  --body-background-image: radial-gradient(hsl(200, 80%, 30%), hsl(210, 80%, 20%));
+  --body-color: white;
+  --body-font-family: Helvetica, Arial,'Roboto', 'Open Sans', sans-serif;
+
+
+  --main-nav-background-colour: rgba(0, 0, 0, 0.6);
+  --main-nav-link-colour: hsl(40, 100%, 70%);
+
+  --h1h2h3h4-font-family: 'Alfa Slab One', 'Merriweather', serif;
+
+  --background-gradient-of-first-big-block: ;
+  --border-radius-of-first-big-block: .3rem;
+
+  --text-color-in-card-element-eckcept-first: hsl(210, 15%, 20%);
+  --color-card-background-exsept-firstEl: #fff;
+  --card-exept-first-border-radius: .3rem;
+
+   --colour-btn-in-bottom: #48a79c;
+   --colour-btn-in-bottom-onHover: #2d6d63;
+
+   --btn-in-bottom-border-radius: .3rem;
+
+   --colour-brend-light: #48a79c;
+   --colour-brend-dark: #2d6d63;
+   --colour-brend-red: #ad000e;
+}
+
+body {
+        background-color: var(--body-background-color);
+        background-image: var(--body-background-image);
+        color: var(--body-color):;
+        font-family: var(--body-font-family);
+        line-height: 1.4;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+    a{
+
+        cursor: pointer;
+        font-size: 1.1rem;
+        /*text-decoration: none;*/
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        /*color: var(--colour-brend-red); */
+
+    }
+    a:visited {
+      /*color: var(--colour-brend-dark); */
+    }
+    a:hover {
+      /*color: var(--colour-brend-dark);*/
+    }
+    a:active {
+
+      /*color: var(--colour-brend-red);*/
+    }
+
+h1, h2, h3 {
+        font-family: var(--h1h2h3h4-font-family);
+        font-weight: 900;
+        font-size: 1.5em;
+      }
+main {
+        display: block;
+      }
+svg {
+        max-width: 100%;
+      }
+
+
+
+   
+
+.wraper {
+  margin: 0 auto;
+}
+@media (min-width: 30em) {
+   .wraper {
+    padding: 0 2vw 2vw;
+    max-width: 1500px;
+  } 
+}
+
+/*
+Загооловок
+
+Логотип с именем в шапке
+
+Markup:
+<header>
+      <div class="page-header">
+        <img src="https://malini4ev.site/images/logo.svg" alt="">
+        <h1>alinichev.site</h1>
+      </div>
+</header>
+
+Styleguide header
+*/
+  .page-header {
+          display: flex;
+          align-items: flex-start;
+          margin: 0;
+          padding: 1rem;
+        }
+  .page-header > img {
+    margin: .1em;
+    width: 3em;
+        }
+  .page-header > h1 {
+          color: var(--body-color);
+          margin: 0;
+          font-weight: 100;
+          font-size: 1.3em;
+        }
+
+@media (min-width: 30em) {
+  .page-header {
+          padding: 1rem 2rem;
+          display: flex;
+          align-items: flex-end;
+        }
+  .page-header > img {
+          margin: .1em;
+          width: 3em;
+        }
+  .page-header > h1 {
+          color: var(--body-color);
+          font-weight: 100;
+          font-size: 1.3em;
+        }
+}
+
+
+/*
+Мое меню
+
+
+Чтоб использовать необходимо указать где оно будет
+
+Исправить на position: Fixed
+/
+          left: 0 - эти значения нужно определить
+/
+          top: 0 -  эти значения нужно определить
+
+Markup:
+<nav class="main-nav" style="position: relative;top: 0;">
+      <ul class="nav-links" >
+        <li>
+          <a href="#toHome">
+            <img src="https://malini4ev.site/images/home.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#toWebPack">
+            <img src="https://malini4ev.site/images/members.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">WebPack</span>
+          </a>
+        </li>
+        <li>
+          <a href="#toNodejs">
+            <img src="https://malini4ev.site/images/star.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">NodeJS</span>
+          </a>
+        </li>
+        <li>
+          <a href="#toContact">
+            <img src="https://malini4ev.site/images/calendar.svg" class="nav-links__icon"/>
+            <span class="nav-links__label">Контакты</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+Styleguide menu
+*/
+ @media (min-width: 30em) {
+        .main-nav {
+          position: fixed;
+          right: 0;
+          top: 8.25rem;
+          z-index: 10;
+          background-color: transparent;
+          transition: background-color .5s linear;
+          border-top-left-radius: 0.5em;
+          border-bottom-left-radius: 0.5em;
+        }
+
+        .main-nav:hover {
+          background-color: var(--main-nav-background-colour);
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        list-style: none;
+        justify-content: space-between;
+      }
+      .nav-links > li + li {
+        margin-left: 0.8em;
+      }
+      .nav-links > li > a {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.8em 0;
+        color: white;
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .nav-links__icon {
+        height: 1.5em;
+        width: 1.5em;
+        vertical-align: -0.2em;
+      }
+      .nav-links > li > a:hover {
+        color: var(--main-nav-link-colour);
+      }
+
+      @media (min-width: 30em) {
+        .nav-links {
+          display: block;
+          padding: 1em;
+          margin-bottom: 0;
+        }
+        .nav-links > li + li {
+          margin-left: 0;
+        }
+
+        .nav-links__label {
+          display: inline-block;
+          margin-left: 1em;
+          padding-right: 1em;
+          opacity: 0;
+          transform: translate(-1em);
+          transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3),
+                      opacity 0.4s linear;
+        }
+        .nav-links:hover .nav-links__label,
+        .nav-links a:focus > .nav-links__label {
+          opacity: 1;
+          transform: translate(0);
+        }
+        .nav-links > li:nth-child(2) .nav-links__label {
+          transition-delay: 0.1s;
+        }
+        .nav-links > li:nth-child(3) .nav-links__label {
+          transition-delay: 0.2s;
+        }
+        .nav-links > li:nth-child(4) .nav-links__label {
+          transition-delay: 0.3s;
+        }
+        .nav-links > li:nth-child(5) .nav-links__label {
+          transition-delay: 0.4s;
+        }
+
+        .nav-links__icon {
+          transition: transform 0.2s ease-out;
+        }
+
+        .nav-links a:hover > .nav-links__icon,
+        .nav-links a:focus > .nav-links__icon {
+          transform: scale(1.3);
+        }
+      }
+
+/*
+Первый большой блок
+
+Фото на фоне и с описанием в шапке
+
+Markup:
+<main class="oneColum header">
+      <div class="oneColum__myPhoto">
+        <img src="https://malini4ev.site/images/profilepic2.jpg" alt="Cool frelancer"/>
+        <div class="contenerMy">
+          <div class="conteinerMy__box"></div>
+          <div class="conteinerMy__box"></div>
+          <div class="conteinerMy__box"></div>
+        </div>
+      </div>
+      <div class="oneColum__body" id="toHome" name="toHome">
+        <h1>Malinichev Sergey Urevich</h1>
+        <h3>Full Stack developer (Frontend/ Backend)</h3>
+        <div class="inline">
+          <a  class="btn-prim" id="myShake" href="#toContact">Связатся!</a>
+         </div>
+      </div>
+    </main>
+
+Styleguide fist__el
+*/
+    .oneColum.zagalov {
+        margin: 1em 1rem 1em;
+        padding: 1rem;
+        perspective: 493px;
+      
+        color: black;
+      
+        border-radius: var(--border-radius-of-first-big-block);
+        background-color: rgba(254, 254, 254, .85);
+        box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.3);
+
+      }
+    
+
+    .oneColum.header {
+        margin: 1em 1rem 1em;
+        padding: 1rem;
+        perspective: 493px;
+    
+        background-size: cover;
+        color: #fff;
+        text-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+        border-radius: 1rem;
+
+      }
+
+    .oneColum.header:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: url(images/backgr.svg);
+    
+        background-size: cover;
+         
+       
+        z-index: -1;
+        border-radius: var(--card-exept-first-border-radius);
+      }
+    .oneColum.header > .oneColum__myPhoto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      
+      }
+
+
+      .oneColum.header > .oneColum__myPhoto > img {
+        display: block;
+     
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 0%;
+        border: 5px solid #ddd;
+        -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
+        
+        height: 14em;
+        z-index: 6;
+      }
+
+      .contenerMy{
+        display: flex;  
+        flex-flow: column;
+        position: relative;
+        left: -0.2em;
+      }
+      .contenerMy > .conteinerMy__box{
+
+        height: 2em;
+        width: 1em;
+        background-color: #00a3da;
+      }
+
+      .contenerMy > .conteinerMy__box + .conteinerMy__box{
+        margin-top: 1em;
+        background-color: #ff4013;
+      }
+
+      .contenerMy > .conteinerMy__box:last-child{
+        background-color: #fdc700;  
+      }   
+    .oneColum {
+        /* animation: fly-in 500ms ease-in; */
+        /* animation-fill-mode: backwards; */
+      }
+    .oneColum__body > p {
+
+          margin-block-end: 0;
+    }
+    .oneColum__body > .inline > .btn {
+      border-radius: 0;
+      margin: auto 0;
+      padding: 0.6em 1em;
+      border: 0;
+      /* background-color: hsl(220, 50%, 50%); */
+      /* color: white; */
+      font: inherit;
+      /* transition: background-color 0.3s linear; */
+      cursor: pointer;
+      font-size: inherit;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .zagalov__body{
+
+    }
+    .oneColum__body{    
+    
+        padding: 1em 0 0 0;
+        flex:2;
+        color: black;
+        z-index: 6;
+      }
+    .oneColum__body > .inline  {
+      font-size: 1.1rem;
+      height: auto;
+    } 
+    .oneColum__body > .linkToMail{
+      display: block;
+      margin-block-start: 1em;
+      text-decoration: none;
+      color: #fff;
+      text-transform: none;
+    }
+    
+  @media (min-width: 30em) {
+    .wraper{
+
+    }
+    .oneColum.header {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        perspective: 500px;
+   
+        color: #ddd;
+        
+        border-radius: var(--card-exept-first-border-radius);
+        /* align-items: center; */
+      }
+     
+      .oneColum.header > .oneColum__myPhoto {
+            display: flex;
+            align-items: center;
+            /* margin-left: 3em; */
+      }
+
+
+      .oneColum.header > .oneColum__myPhoto > img {
+        display: block;
+   
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 0%;
+        border: 5px solid #ddd;
+        -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.35);
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,0.35);
+     
+        height: 14em;
+        z-index: 6;
+      }
+
+      .contenerMy{
+        display: flex;  
+        flex-flow: column;
+        position: relative;
+        left: -0.2em;
+      }
+      .contenerMy > .conteinerMy__box{
+
+        height: 2em;
+        width: 1em;
+        background-color: #00a3da;
+      }
+
+      .contenerMy > .conteinerMy__box + .conteinerMy__box{
+        margin-top: 0.2em;
+        background-color: #ff4013;
+      }
+
+      .contenerMy > .conteinerMy__box:last-child{
+        background-color: #fdc700;  
+      }   
+
+      .oneColum {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 5rem;
+      }
+      
+      .oneColum__body{
+        
+        padding: 1em;
+        flex: 2;
+        color: #ddd;
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.65);
+        z-index: 6;
+      }
+      .oneColum__body > h2 {
+        /* font-family: var(--h1h2h3h4-font-family); */
+        font-weight: 900;
+        font-size: 1.1em;
+      }
+      .oneColum__body > h3 {
+        /* font-family: var(--h1h2h3h4-font-family); */
+        font-weight: 900;
+        font-size: 1.1em;
+      }
+      .oneColum__body > .inline  {
+        font-size: 17px;
+        height: auto;
+      } 
+      .zagalov__body{
+        text-decoration-color: black;
+        color: #444;
+        text-shadow: ;
+      }
+      .inline {
+        display: flex;
+        justify-content: end;
+      
+        flex-wrap: wrap;
+      }
+
+      .inline > p {
+       margin-right: 3em; 
+      }
+  }  
+
+
+/*
+Все остальные элементы
+
+Блоки которые следуют за первым большим
+
+Markup:
+<main class="flyin-grid">
+      <div class="flyin-grid__item card" >
+        <div id="PixelPerfect" class="">
+          <img src="https://malini4ev.site/images/pixPerf.png"/>
+        </div>
+        <p>
+          Имею опыт верстки <a  href="https://investstroy.malini4ev.site/PSD/!PC/1 Glavnaja.jpg">PixelPerfect</a> из <a class="" href="https://investstroy.malini4ev.site" role="button">PSD</a>, разбираюсь в , <a class="" href="https://mssg.me/demo" role="button">чужом коде </a>копирую <a class="" href="https://wow-vzmah.ru"  role="button">нужный сайт и модифицирую</a> его. 
+        </p>    
+      </div>
+</main>
+
+Styleguide allOtherBlock
+*/
+      .flyin-grid {
+        margin: 1em 1rem;
+        perspective: 500px;
+      }
+      .flyin-grid__item + .flyin-grid__item{
+        margin-top: 1em;
+      }
+      .flyin-grid__item {
+            
+        /* animation: fly-in 600ms ease-in; */
+        /* animation-fill-mode: backwards; */
+      }
+      .oneColum {
+        /* animation: fly-in 500ms ease-in; */
+        /* animation-fill-mode: backwards; */
+      }
+      .flyin-grid__item:nth-child(2) {
+        /* animation-delay: 0.15s; */
+      }
+      .flyin-grid__item:nth-child(3) {
+        /* animation-delay: 0.3s; */
+      }
+      .flyin-grid__item:nth-child(4) {
+        /* animation-delay: 0.45s; */
+      }
+@media (min-width: 30em) {
+        .flyin-grid {
+          display: flex;
+          flex-wrap: wrap;
+          perspective: 500px;
+        }
+        
+      .flyin-grid__item {
+        align-items: end;
+        width: 18em;
+        margin: 1em 1em ;
+        /* animation: fly-in 600ms ease-in; */
+        /* animation-fill-mode: backwards; */
+      }
+  }
+
+  @supports (display: grid) {
+      .flyin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+          }      
+      .flyin-grid__item {
+            max-width: initial;
+            margin: 0;
+          }
+      .flyin-grid__item + .flyin-grid__item{
+        margin-top: 1em;
+  }
+    @media (min-width: 30em) {
+      .flyin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 2em;
+          }
+      .flyin-grid__item {
+            width: 100%;
+            margin: 0;
+          }
+      .flyin-grid__item + .flyin-grid__item{
+              margin-top: 0;
+            }      
+      }        
+  }  
+
+  .card {       
+        padding: 0.5em;
+        background-color: var(--color-card-background-exsept-firstEl);
+        color:var(--text-color-in-card-element-eckcept-first);
+        box-shadow: 0.2em 0.5em 1em rgba(0, 0, 0, 0.3);
+        border-radius: var(--card-exept-first-border-radius);
+      }
+
+  .card > img {
+        width: 100%;
+      }
+  .allCenter {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .allCenter > #adr {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: initial;
+  }
+
+/*
+Копки которые внизу
+
+Последний блок с ссылками ввиде кнопок
+
+Markup:
+<main class="flyin-grid__item card">
+       <div class="flyin-grid__item card" id="toContact" name="toContact" style="margin-bottom: 2em;" >
+       <h4>Контакты</h4>
+        <p>
+          Адрес: г. Иркутск, ул. Пискунова 137/3
+        </p>
+        <p class="">
+              <a href="tel:+79831613120">Тел.: +79831613120</a>
+        </p>
+            <div class="message">
+              <a class="btn" href="https://api.whatsapp.com/send?phone=+79831613120&text=&source=&data=#"
+                 target="_blank" data-messenger="whatsapp">
+                <img src="https://malini4ev.site/images/icons/messengers/whatsapp.svg" alt="whatsapp icon">
+              </a>
+              <a class="btn" href="viber://chat?number=+79831613120" target="_blank" data-messenger="viber"
+                >
+                <img src="https://malini4ev.site/images/icons/messengers/viber.svg" alt="viber icon">
+              </a>
+              <a class="btn" href="tg://resolve?domain=Malini4" target="_blank" data-messenger="instagram">
+                <img src="https://malini4ev.site/images/icons/messengers/telegram.svg" alt="instagram icon">
+              </a>
+              <a class="btn " href="https://www.linkedin.com/in/malini4/" target="_blank" data-messenger="git">
+                <img src="https://malini4ev.site/images/icons/messengers/li3-01.svg" alt="git icon">
+              </a>
+              <a class="btn btn-info ml-2 " href="https://github.com/malinichev" target="_blank" data-messenger="git">
+                <img src="https://malini4ev.site/images/git.svg" alt="git icon">
+              </a>
+            </div>
+      </div>
+</main>
+
+Styleguide btnInBottom
+*/ 
+.message{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.message > .btn {
+  width: calc(100% / 7);
+  display: flex;
+  justify-content: center;
+  
+}
+.btn {
+  /* width: calc(100% / 6); */
+  display: inline-block;
+  margin: 0.1rem 0;
+  font-weight: 400;
+  color: #888;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  
+  border-radius: var(--btn-in-bottom-border-radius);
+  /* border-radius: 0; */
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  color: #fff;
+  box-shadow: inset 0 0 0.5em #124,
+              inset 0 0.5em lem rgba(0,0,0,0.4);   
+  background-color: var(--colour-btn-in-bottom);
+  border-color: var(--colour-btn-in-bottom);
+}
+.btn:hover {  
+  color: #fff;
+  background-color: var(--colour-btn-in-bottom-onHover);
+  border-color: var(--colour-btn-in-bottom-onHover);
+}
+
+.btn > img {
+  float: left;
+}
+.oneColum__body > .inline > .btn-prim {
+      padding: 0.8em 1em;
+      border: 0;
+      background-color: hsl(220, 50%, 50%);
+      color: white;
+      font: inherit;
+      transition: background-color 0.3s linear;
+    }
+.btn-prim:hover {
+  background-color: hsl(220, 45%, 40%);
+}
+
+.shake {
+
+      animation: shake 0.7s linear;
+      
+}      
+
+    @keyframes shake {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      10%,
+      30%,
+      50%,
+      70% {
+        transform: translateX(-0.4em);
+      }
+      20%,
+      40%,
+      60% {
+        transform: translateX(0.4em);
+      }
+      80% {
+        transform: translateX(0.3em);
+      }
+      90% {
+        transform: translateX(-0.3em);
+      }
+    }
+
+      @keyframes fly-in {
+        0% {
+          transform: translateZ(-800px) rotateY(90deg);
+          opacity: 0;
+        }
+        56% {
+          transform: translateZ(-160px) rotateY(87deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateZ(0) rotateY(0);
+        }
+      }
+

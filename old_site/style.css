@@ -1,0 +1,338 @@
+body {
+	position: relative;
+    background: #f5f5f5;
+    background-size: cover;
+    background-attachment: fixed;
+}
+a{
+	cursor: pointer;
+}
+.anim
+{
+    
+    transition: 1s;
+    opacity: 1;
+}
+
+.red
+{
+    color: red;
+}
+
+.lineBottom
+{
+	/*z-index: 2000;*/
+	position: relative;
+	/*padding: 0;
+	margin: 0;*/
+	/*bottom: 4px;*/
+	height: 4px;
+	width: 100%;
+	background: url(img/tophead.png) bottom center;
+}
+.title{
+	padding: 1em 10vw;
+
+}
+
+.photo
+{
+    margin: -10vw auto 1vw;
+    z-index: 2;
+   	border-radius: 50%;
+    width: 21vw;
+    height: 21vw;
+    display: block;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.imgPhoto
+{
+	background-image: url(img/profilepic2.jpg);
+	border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10vw;
+    margin-top: -10vw;
+
+}
+.grid
+{	
+	margin-top: 1vh;
+	display: grid;
+	grid-template-columns: 1fr 6fr;
+	/*grid-template-rows: 1fr 1fr 1fr;*/
+	grid-gap: 0.5em;
+
+}
+.myHeder
+{    
+    
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+}
+
+@media (min-width: 576px) and (max-width: 3000px) {
+.logo
+{
+    margin-top: 13rem;
+}
+
+
+.navbar {
+background-color: rgba(120, 194, 173, 0.411);
+}
+.nav-item:hover {
+    transition: 1s;
+    border-radius: 3px;
+    height: 100%;
+    background: rgb(120, 194, 173);
+    
+   }
+.nav-link:hover {
+    transition: 1s;
+    color: #ffe !important; /* Цвет ссылки */ 
+} 
+}
+
+@media (min-width: 200px) and (max-width: 575px) {
+
+.photo{
+	
+margin: -25vw auto 1vw;
+width: 51vw;
+height: 51vw;
+}
+
+.imgPhoto
+{
+    width: 50vw;
+    height: 50vw; 
+    margin-left: -25vw;
+    margin-top: -25vw;
+}
+
+.logo
+{
+    margin-top: 23vh;
+
+}
+.navbar {
+    background-color: rgb(120, 194, 173);
+}
+.nav-item:hover {
+    transition: 1s;
+    height: 100%;
+    border-radius: 0.4rem;
+    width: 100%;
+    
+    background-color: rgb(71, 114, 102);
+    
+   }
+.nav-link:hover {
+    transition: 1s;
+    color: #ffe !important; /* Цвет ссылки */ 
+} 
+
+}
+
+
+
+.imgMy
+{
+	margin: 0;
+	padding: 0;
+	width: 70%;
+	border-radius: 5px;
+	filter: drop-shadow(2px 2px 4px gray);
+}
+
+ 
+/* a.nav-item : hover {
+    background-color: red!important;
+
+} */
+
+/* messenger button */
+
+.slideDown {
+	-webkit-transform: translateY(1rem) !important;
+	        transform: translateY(1rem) !important;
+	opacity: 0 !important;
+}
+
+.animated {
+	opacity: 1 !important;
+	-webkit-transform: translateY(0) !important;
+	        transform: translateY(0) !important;
+	transition: opacity 1s ease, -webkit-transform 1s ease;
+	transition: transform 1s ease, opacity 1s ease;
+	transition: transform 1s ease, opacity 1s ease, -webkit-transform 1s ease;
+}
+
+
+
+.mssgme-card {
+	width: calc(100% - .32rem);
+	margin: -.48rem auto 0 auto;
+	padding: .16rem;
+	border-radius: .13rem;
+	box-shadow: 0 .02rem .08rem 0 rgba(0, 0, 0, 0.08);
+	background-color: #fff;
+	opacity: 0;
+	transition-delay: .2s;
+}
+
+.mssgme-card-header {
+	display: flex;
+	margin: 0 0 .16rem 0;
+}
+
+.mssgme-card-header-photo {
+	width: .7rem;
+	height: .7rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.mssgme-card-header-photo > img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.mssgme-card-header-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 0 0 .16rem;
+	width: calc(100% - .7rem);
+}
+
+.mssgme-card-header-content-container > h1 {
+	width: 100%;
+	font-weight: 500;
+	font-size: .18rem;
+	line-height: .24rem;
+	margin: 0 0 .02rem 0;
+}
+
+.mssgme-card-header-content-container > p {
+	width: 100%;
+	font-size: .14rem;
+	line-height: .18rem;
+	color: #888;
+	margin: 0;
+}
+
+.mssgme-card-messengers-list {
+	font-weight: 500;
+	font-size: .14rem;
+	line-height: .41rem;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: .002rem;
+}
+
+.mssgme-card-messengers-list > li {
+	width: 100%;
+	height: .4rem;
+	border-radius: .08rem;
+	background-color: #2f3542;
+	margin: 0 0 .16rem 0;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+.mssgme-card-messengers-list > li:only-of-type {
+	margin: 0;
+}
+
+.mssgme-card-messengers-list > li.messenger {
+	background-color: #0284ff;
+}
+
+.mssgme-card-messengers-list > li.messenger > a > span::before {
+	content: 'Messenger';
+}
+
+.mssgme-card-messengers-list > li.whatsapp {
+	background-color: #24d366;
+}
+
+.mssgme-card-messengers-list > li.whatsapp > a > span::before {
+	content: 'WhatsApp';
+}
+
+.mssgme-card-messengers-list > li.telegram {
+	background-color: #1f98d4;
+}
+
+.mssgme-card-messengers-list > li.telegram > a > span::before {
+	content: 'Telegram';
+}
+
+.mssgme-card-messengers-list > li.vk {
+	background-color: #5b88bd;
+}
+
+.mssgme-card-messengers-list > li.vk > a > span::before {
+	content: 'Vkontakte';
+}
+
+.mssgme-card-messengers-list > li.skype {
+	background-color: #00aff0;
+}
+
+.mssgme-card-messengers-list > li.skype > a > span::before {
+	content: 'Skype';
+}
+
+.mssgme-card-messengers-list > li.viber {
+	background-color: #665cac;
+}
+
+.mssgme-card-messengers-list > li.viber > a > span::before {
+	content: 'Viber';
+}
+
+.mssgme-card-messengers-list > li > a {
+	display: block;
+	color: #fff;
+}
+
+.mssgme-card-messengers-list > li > a > img {
+	display: inline-block;
+	height: .4rem;
+	width: auto;
+	vertical-align: top;
+	margin: 0;
+}
+
+.mssgme-card-messengers-list > li > a > span {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 0 .05rem;
+}
+
+
+
+
