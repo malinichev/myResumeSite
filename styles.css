@@ -746,6 +746,7 @@ Styleguide btnInBottom
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
 }
 .message > .btn {
@@ -758,7 +759,8 @@ Styleguide btnInBottom
 .btn {
   /* width: calc(100% / 6); */
   min-width: 48px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin: 0.1rem 0;
   font-weight: 400;
   color: #888;
@@ -770,7 +772,7 @@ Styleguide btnInBottom
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 0 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
   
@@ -796,7 +798,10 @@ Styleguide btnInBottom
   float: left;
 }
 .oneColum__body > .inline > .btn-prim {
-      padding: 0.8em 1em;
+      padding: 0 1em;
+      min-width: 48px;
+      display: flex;
+      align-items: center;
       border: 0;
       background-color: hsl(220, 50%, 50%);
       color: white;
