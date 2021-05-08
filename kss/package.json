@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.7",
     "kss": "^3.0.0-beta.25",
     "minimist": "^1.2.5",
     "mixin-deep": "^2.0.1",
